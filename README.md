@@ -8,7 +8,7 @@ A comparative speed and accuracy benchmark of pgvector and OpenSearch clusters f
 
 ## Results
 
-For 500 queries of 1000 vectors of dimension 2000 with accuracy@10 on an Intel Core i9-13900H machine :
+For 500 queries over 1000 stored vectors of dimension 2000 with accuracy@10 on an Intel Core i9-13900H machine :
 
 ```txt
 Comparison                               Store Time (s)  Query Time (s)  Precision      
@@ -23,7 +23,7 @@ os_faiss                                 13.75           6.52            0.9944
 
 <img src="./images/1000_benchmark_comparison_2024-07-11.png" width="512px" alt="1000 vectors">
 
-For 500 queries of 10000 vectors of dimension 2000 with accuracy@10 on an Intel Core i9-13900H machine :
+For 500 queries over 10000 stored vectors of dimension 2000 with accuracy@10 on an Intel Core i9-13900H machine :
 
 ```txt
 Comparison                               Store Time (s)  Query Time (s)  Precision      
