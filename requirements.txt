@@ -1,0 +1,4 @@
+opensearch-py==2.6.0
+pgvector==0.3.0
+psycopg2==2.9.9
+scikit-learn==1.5.1
