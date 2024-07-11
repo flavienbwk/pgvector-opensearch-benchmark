@@ -1,5 +1,9 @@
 # pgvector vs OpenSearch benchmark
 
+<p align="center">
+  <img src="./logo.png" width="192px" alt="Logo">
+</p>
+
 A comparative speed and accuracy benchmark of pgvector and OpenSearch clusters for vector comparisons.
 
 ## Results
@@ -17,7 +21,7 @@ os_lucene                                10.44           6.01            0.9938
 os_faiss                                 13.75           6.52            0.9944
 ```
 
-![1000 vectors](./images/1000_benchmark_comparison_2024-07-11.png)
+<img src="./images/1000_benchmark_comparison_2024-07-11.png" width="512px" alt="1000 vectors">
 
 For 500 queries of 10000 vectors of dimension 2000 with accuracy@10 on an Intel Core i9-13900H machine :
 
@@ -32,15 +36,15 @@ os_lucene                                99.72           29.38           0.7674
 os_faiss                                 130.39          31.20           0.7426 
 ```
 
-![10000 vectors](./images/10000_benchmark_comparison_2024-07-11.png)
+<img src="./images/10000_benchmark_comparison_2024-07-11.png" width="512px" alt="10000 vectors">
 
-Memory consumption was not compared (pgvector looks to consume less).
+Interpretation :
 
-Although pgvector looks insanely faster than OpenSearch, the latter allows multiple comparison algorithms after ingestion whereas pgvector requires declaring a predetermined one as index. However, OpenSearch looks less precise than its competitor.
+- Although pgvector looks insanely faster than OpenSearch, the latter allows querying through different algorithms after ingestion whereas pgvector requires declaring a predetermined one as index. However, OpenSearch looks less precise than its competitor.
+- It is worth noting that OpenSearch supports vectors up to 10000 dimensions, which is a lot more than pgvector's 2000 to 4000 dims support.
+- It is worth noting that OpenSearch might be a bit more complex to initially setup while pgvector might be more complex to tune.
 
-It is worth noting that OpenSearch supports vectors up to 10000 dimensions, which is a lot more than pgvector's 2000 to 4000 dims support.
-
-Finally, it is worth nothing that OpenSearch might be a bit more complex to initially setup while pgvector might be more complex to tune.
+_Memory consumption was not compared (pgvector looks to consume less)._
 
 ## Supported algorithms
 

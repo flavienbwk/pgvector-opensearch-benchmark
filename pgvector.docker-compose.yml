@@ -1,3 +1,5 @@
+# Inspired from https://github.com/eremeykin/pg-primary-replica
+
 x-postgres-common:
   &postgres-common
   image: flavienb/pgvector:latest
