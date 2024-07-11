@@ -44,6 +44,8 @@ Interpretation :
 - It is worth noting that OpenSearch supports vectors up to 10000 dimensions, which is a lot more than pgvector's 2000 to 4000 dims support.
 - It is worth noting that OpenSearch might be a bit more complex to initially setup while pgvector might be more complex to tune.
 
+Missing comparisons that should be benchmarked before choosing a solution : 1M and 10M vectors.
+
 _Memory consumption was not compared (pgvector looks to consume less)._
 
 ## Supported algorithms
