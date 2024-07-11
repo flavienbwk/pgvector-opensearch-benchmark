@@ -40,7 +40,7 @@ os_faiss                                 130.39          31.20           0.7426
 
 Interpretation :
 
-- Although pgvector looks insanely faster than OpenSearch, the latter allows querying through different algorithms after ingestion whereas pgvector requires declaring a predetermined one as index. However, OpenSearch looks less precise than its competitor.
+- Although pgvector looks a lot faster than OpenSearch, the latter allows querying through different algorithms after ingestion whereas pgvector requires declaring a predetermined one as index. However, OpenSearch looks less precise than its competitor.
 - It is worth noting that OpenSearch supports vectors up to 10000 dimensions, which is a lot more than pgvector's 2000 to 4000 dims support.
 - It is worth noting that OpenSearch might be a bit more complex to initially setup while pgvector might be more complex to tune.
 
